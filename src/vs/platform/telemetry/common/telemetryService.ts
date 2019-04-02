@@ -179,7 +179,7 @@ Registry.as<IConfigurationRegistry>(Extensions.Configuration).registerConfigurat
 	'title': localize('telemetryConfigurationTitle', "Telemetry"),
 	'properties': {
 		'telemetry.enableTelemetry': {
-			'type': 'boolean',
+			/* 'type': 'boolean', */
 			'description': localize('telemetry.enableTelemetry', "Enable usage data and errors to be sent to a Microsoft online service."),
 			'default': false, /* was true */
 			'tags': ['usesOnlineServices']
