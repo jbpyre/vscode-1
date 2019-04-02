@@ -16,34 +16,32 @@ configurationRegistry.registerConfiguration({
 	properties: {
 		'update.mode': {
 			type: 'string',
-			enum: ['none', 'manual', 'default'],
-			default: 'default',
+			enum: ['none'],
+			default: 'none',
 			scope: ConfigurationScope.APPLICATION,
 			description: localize('updateMode', "Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service."),
 			tags: ['usesOnlineServices'],
 			enumDescriptions: [
-				localize('none', "Disable updates."),
-				localize('manual', "Disable automatic background update checks. Updates will be available if you manually check for updates."),
-				localize('default', "Enable automatic update checks. Code will check for updates automatically and periodically.")
+				localize('none', "Disable updates.")
 			]
 		},
 		'update.channel': {
 			type: 'string',
-			default: 'default',
+			default: 'none',
 			scope: ConfigurationScope.APPLICATION,
 			description: localize('updateMode', "Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service."),
 			deprecationMessage: localize('deprecated', "This setting is deprecated, please use '{0}' instead.", 'update.mode')
 		},
 		'update.enableWindowsBackgroundUpdates': {
-			type: 'boolean',
-			default: true,
+			/*type: 'boolean',*/
+			default: false, /* was true */
 			scope: ConfigurationScope.APPLICATION,
 			description: localize('enableWindowsBackgroundUpdates', "Enables Windows background updates. The updates are fetched from a Microsoft online service."),
 			tags: ['usesOnlineServices']
 		},
 		'update.showReleaseNotes': {
-			type: 'boolean',
-			default: true,
+			/*type: 'boolean',*/
+			default: false, /* was true */
 			description: localize('showReleaseNotes', "Show Release Notes after an update. The Release Notes are fetched from a Microsoft online service."),
 			tags: ['usesOnlineServices']
 		}

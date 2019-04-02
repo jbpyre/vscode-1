@@ -213,16 +213,16 @@ Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration)
 		type: 'object',
 		properties: {
 			'extensions.autoUpdate': {
-				type: 'boolean',
+				/*type: 'boolean', */
 				description: localize('extensionsAutoUpdate', "When enabled, automatically installs updates for extensions. The updates are fetched from a Microsoft online service."),
-				default: true,
+				default: false, /* was true */
 				scope: ConfigurationScope.APPLICATION,
 				tags: ['usesOnlineServices']
 			},
 			'extensions.autoCheckUpdates': {
-				type: 'boolean',
+				/*(type: 'boolean',*/
 				description: localize('extensionsCheckUpdates', "When enabled, automatically checks extensions for updates. If an extension has an update, it is marked as outdated in the Extensions view. The updates are fetched from a Microsoft online service."),
-				default: true,
+				default: false, /* was true */
 				scope: ConfigurationScope.APPLICATION,
 				tags: ['usesOnlineServices']
 			},
